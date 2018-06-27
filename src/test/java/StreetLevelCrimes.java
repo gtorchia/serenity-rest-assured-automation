@@ -21,10 +21,6 @@ import static org.hamcrest.Matchers.hasItems;
 public class StreetLevelCrimes {
 
 
-
-
-
-
     @BeforeClass
     public static void setUp() throws IOException {
 
@@ -36,16 +32,13 @@ public class StreetLevelCrimes {
 
             connection = (HttpURLConnection) new URL("https://data.police.uk/").openConnection();
             connection.setRequestMethod("HEAD");
-            int responseCode = connection.getResponseCode();
-
-            if (responseCode != 200) logger.log(Level.INFO, "Server no available");
+            if (connection.getResponseCode() != 200) logger.log(Level.INFO, "Server no available");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
 
 
     }
-
 
 
 
