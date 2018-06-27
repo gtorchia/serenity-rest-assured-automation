@@ -1,7 +1,17 @@
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
+
+import org.junit.BeforeClass;
 import org.junit.Test;
+
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import static org.hamcrest.Matchers.everyItem;
 import static org.hamcrest.Matchers.hasItems;
@@ -9,6 +19,35 @@ import static org.hamcrest.Matchers.hasItems;
 
 
 public class StreetLevelCrimes {
+
+
+
+
+
+
+    @BeforeClass
+    public static void setUp() throws IOException {
+
+        HttpURLConnection connection;
+
+        Logger logger = Logger.getLogger(StreetLevelCrimes.class.getName());
+
+        try {
+
+            connection = (HttpURLConnection) new URL("https://data.police.uk/").openConnection();
+            connection.setRequestMethod("HEAD");
+            int responseCode = connection.getResponseCode();
+
+            if (responseCode != 200) logger.log(Level.INFO, "Server no available");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+
+
 
     @Test
     public void streetLevelCrimesTest(){
