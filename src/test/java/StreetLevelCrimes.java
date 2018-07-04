@@ -1,9 +1,13 @@
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import net.serenitybdd.cucumber.CucumberWithSerenity;
+
+import net.serenitybdd.junit.runners.SerenityRunner;
 import org.apache.http.HttpStatus;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 
 import java.io.IOException;
@@ -17,7 +21,8 @@ import static org.hamcrest.Matchers.everyItem;
 import static org.hamcrest.Matchers.hasItems;
 
 
-
+//@RunWith(SerenityRunner.class)
+//@RunWith(CucumberWithSerenity.class)
 public class StreetLevelCrimes {
 
 
@@ -76,7 +81,6 @@ public class StreetLevelCrimes {
                 statusCode(200).
                 and().
                 body("location.latitude",everyItem(hasItems("52.630684")));
-
 
     }
 }
