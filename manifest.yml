@@ -1,0 +1,6 @@
+---
+applications:
+- name: serenity-rest-assured-automation
+  memory: 768M
+  instances: 1
+  random-route: true
