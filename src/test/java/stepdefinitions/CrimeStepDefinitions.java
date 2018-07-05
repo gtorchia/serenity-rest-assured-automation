@@ -12,13 +12,13 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 
-import org.apache.http.HttpStatus;
+
 import userdefinedobject.Location;
 
 import java.util.List;
 
 
-import static org.hamcrest.Matchers.everyItem;
+
 import static org.hamcrest.Matchers.hasItems;
 
 
