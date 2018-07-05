@@ -227,6 +227,7 @@
                 <configuration>
                     <includes>
                         <include>**/Crime*.java</include>
+                        <include>**/Street*.java</include>
                         <!--<include>**/*Spec.java</include>-->
                         <!--<include>**/*Test.java</include>-->
                     </includes>
