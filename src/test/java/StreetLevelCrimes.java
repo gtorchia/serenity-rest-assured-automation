@@ -22,7 +22,7 @@ import static org.hamcrest.Matchers.hasItems;
 
 
 //@RunWith(SerenityRunner.class)
-//@RunWith(CucumberWithSerenity.class)
+@RunWith(CucumberWithSerenity.class)
 public class StreetLevelCrimes {
 
 

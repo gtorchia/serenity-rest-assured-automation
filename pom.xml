@@ -239,6 +239,7 @@
                 <configuration>
                     <includes>
                         <include>**/stepdefinitions/*.java</include>
+                        <include>**/*.java</include>
                     </includes>
                     <systemPropertyVariables>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
