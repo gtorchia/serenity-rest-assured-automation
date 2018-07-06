@@ -3,6 +3,7 @@ package stepdefinitions;
 
 
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -90,4 +91,22 @@ public class StreetStepDefinitions {
 
     }
 
+
+    @Given("^requests with the following  <latitude> <longitude> <date>$")
+    public void requestsWithTheFollowingLatitudeLongitudeDate() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @When("^http status is (\\d+)$")
+    public void httpStatusIs(int arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Then("^the possible value are <result>$")
+    public void thePossibleValueAreResult() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 }

@@ -25,10 +25,7 @@ public class CSVReader {
             System.out.println(in.getName());
             Iterable<CSVRecord> records = CSVFormat.EXCEL.withHeader().parse(readeCSV);
             for (CSVRecord record : records) {
-               s
                 recordinserted.add(new SinglePoint(record.get("Longitude") , record.get("Latitude"), record.get("Date").substring(0,10)));
-
-
             }
 
         } catch (FileNotFoundException e) {
