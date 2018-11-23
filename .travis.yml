@@ -1,4 +1,8 @@
 language: java
 sudo: false
-script : mvn  verify
-script : mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+script : mvn sonar:sonar \
+  -Dsonar.projectKey=gtorchia_serenity-rest-assured-automation \
+  -Dsonar.organization=gtorchia-github \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=40e06dbbb2ff82fd1e11e43dfbb10244edaccdc9
+ script : mvn verify
