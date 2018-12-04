@@ -57,7 +57,13 @@
             <url>http://jcenter.bintray.com</url>
         </pluginRepository>
     </pluginRepositories>
-
+	
+	<scm>
+        	<connection>scm:git:git@github.com:SonarSource/serenity-rest-assured-automation.git</connection>
+        	<developerConnection>scm:git:git@github.com:SonarSource/serenity-rest-assured-automation.git</developerConnection>
+        	<url>https://github.com/gtorchia/serenity-rest-assured-automation</url>
+    	</scm>
+	
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
