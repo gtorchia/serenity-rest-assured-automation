@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+/**
+* Spring application ..only to trigger the build on devops
+*/
 @SpringBootApplication
 public class Application {
 
